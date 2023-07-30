@@ -11,7 +11,7 @@ contract EcrecoverTest is Test {
         ecrecoverContract = new Ecrecover();
     }
 
-    function testSignatureVerification() public {
+    function testSignatureVerification() public view {
         string memory _msg = "hello world";
         bytes32 msgHash = keccak256(abi.encodePacked(_msg));
         uint256 privateKey = 0x1234567890123456789012345678901234567890123456789012345678901234;

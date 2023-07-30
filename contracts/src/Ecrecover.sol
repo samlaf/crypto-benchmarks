@@ -8,7 +8,7 @@ contract Ecrecover {
         bytes32 r,
         bytes32 s,
         bytes32 hash
-    ) external {
+    ) external pure {
         address signer = ecrecover(hash, v, r, s);
         require(signer != address(0), "ECDSA: invalid signature");
     }
